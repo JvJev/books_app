@@ -23,6 +23,7 @@ const Header = () => {
             <Tab LinkComponent={NavLink} to="/add" label="Add book" />
             <Tab LinkComponent={NavLink} to="/books" label="Books" />
             <Tab LinkComponent={NavLink} to="/about" label="This project" />
+            <Tab LinkComponent={NavLink} to="/signin" label="Signin"/>
           </Tabs>
         </Toolbar>
       </AppBar>
