@@ -2,7 +2,8 @@ import { Button } from "@mui/material";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./Book.css";
-const Book = (props) => {
+
+const BookCard = (props) => {
   const history = useNavigate();
   const { _id, name, author, description, price, image } = props.book;
   const deleteHandler = async () => {
@@ -18,7 +19,7 @@ const Book = (props) => {
       <img src={image} alt={name} />
       <div className="book-info">
       <article>By {author}</article>
-      <h3>{name}</h3>
+      <h3>"{name}"</h3>
       <p>{description}</p>
       <h3>{price} Eur</h3>
       </div>
@@ -33,4 +34,4 @@ const Book = (props) => {
   );
 };
 
-export default Book;
+export default BookCard;

@@ -17,7 +17,7 @@ li {
 
 .card {
   margin: auto;
-  padding: 5px;
+  padding: 15px;
   height: 100%;
   width: 100%;
   box-shadow: 5px 5px 10px #ccc;
@@ -31,21 +31,23 @@ li {
 .card > img {
   width: 100%;
   height: 50%;
+  padding-bottom: 5px;
   object-fit:contain;
 }
 .card article {
   padding: 10;
+  font-style:italic;
 }
 .card h3 {
-  padding: 10px;
+  margin: 5px;
 }
 
 .card p {
-  padding: 7x;
+  margin: 5px;
 }
 .book-info{
   padding-left: 5px;
   padding-right: 5px;
-  background-color: rgb(234, 244, 247);
+  background-color: rgb(235, 255, 241);
   border-radius: 10px;
 }
