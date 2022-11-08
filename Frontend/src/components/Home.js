@@ -1,10 +1,11 @@
 import { Button, Typography, Box } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import "../App.css";
 
 const Home = () => {
   return (
-    <div>
+    <div className='superHome'>
       <Box display="flex" flexDirection="column" alignItems="center">
         <Button
           LinkComponent={Link}

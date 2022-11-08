@@ -1,5 +1,8 @@
 import { useRef } from 'react';
 import { post } from '../../plugins/http';
+import "./Reg.css";
+import { Button } from '@mui/material';
+
 
 
 const Register = () => {
@@ -11,18 +14,20 @@ const Register = () => {
       email: emailRef.current.value,
       password: passRef.current.value,
     };
-    const data = await post('register', user)
+    const data = await post('register', user);
 
-
-        console.log(data)
+    console.log(data);
   }
 
   return (
-    <div>
-      <input ref={emailRef} type="text" placeholder="email" />
-      <input ref={passRef} type="text" placeholder="pass one" />
-      <button onClick={register}>Register</button>
+    <div className='regDiv'>
+      <input className='regInput' ref={emailRef} type="text" placeholder="Email" />
+      <input className='regInput' ref={passRef} type="text" placeholder="Password" />
+      <button className='regButton' onClick={register}>Register</button>
+      
     </div>
+
+
   );
 };
 

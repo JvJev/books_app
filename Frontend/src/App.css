@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.superHome{
+  background-image: url(https://wallpaperaccess.com/full/4167709.gif);
+  height: 100vh;
+  background-size: cover;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+}
+
+.right{
+  align-content: flex-start;
+}
