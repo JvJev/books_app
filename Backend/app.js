@@ -3,11 +3,16 @@ const mongoose = require("mongoose");
 const router = require("./routes/book-routes");
 const cors = require("cors");
 const app = express();
+const registerRouter = require("./routes/user-routes");
+
 
 // Middlewares
 app.use(express.json()); // tikrinu ar siunciami duomenys yra JSON formato
 app.use(cors());
 app.use("/books", router); // localhost:5000/books
+app.use("/", registerRouter)
+
+
 
 // app.use("/", (rew, res, next) => {
 //   res.send("middleware is working")

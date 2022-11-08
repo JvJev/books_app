@@ -11,7 +11,6 @@ const Register = () => {
       email: emailRef.current.value,
       password: passRef.current.value,
     };
-console.log(user)
     const data = await post('register', user)
 
 
