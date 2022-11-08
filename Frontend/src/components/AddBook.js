@@ -5,21 +5,21 @@ import {
   FormLabel,
   TextField,
   Typography,
-} from "@mui/material";
-import { Box } from "@mui/system";
-import axios from "axios";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+} from '@mui/material';
+import { Box } from '@mui/system';
+import axios from 'axios';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AddBook = () => {
   const history = useNavigate();
   const [inputs, setInputs] = useState({
-    name: "",
-    description: "",
-    price: "",
-    author: "",
+    name: '',
+    description: '',
+    price: '',
+    author: '',
 
-    image: "",
+    image: '',
   });
   const [checked, setChecked] = useState(false);
   const handleChange = (e) => {
@@ -32,7 +32,7 @@ const AddBook = () => {
 
   const sendRequest = async () => {
     await axios
-      .post("http://localhost:5000/books", {
+      .post('http://localhost:5000/books', {
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),
@@ -46,7 +46,7 @@ const AddBook = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(inputs, checked);
-    sendRequest().then(() => history("/books"));
+    sendRequest().then(() => history('/books'));
   };
 
   return (
@@ -54,11 +54,11 @@ const AddBook = () => {
       <Box
         display="flex"
         flexDirection="column"
-        justifyContent={"center"}
+        justifyContent={'center'}
         maxWidth={700}
-        alignContent={"center"}
+        alignContent={'center'}
         alignSelf="center"
-        marginLeft={"auto"}
+        marginLeft={'auto'}
         marginRight="auto"
         marginTop={10}
       >

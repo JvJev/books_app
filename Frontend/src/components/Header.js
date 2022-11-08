@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import { AppBar, Tab, Tabs, Toolbar, Typography } from "@mui/material";
+import React, { useState } from 'react';
+import { AppBar, Tab, Tabs, Toolbar, Typography } from '@mui/material';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 const Header = () => {
   const [value, setValue] = useState();
   return (
     <div>
-      <AppBar sx={{ backgroundColor: "#425e45" }} position="sticky">
+      <AppBar sx={{ backgroundColor: '#425e45' }} position="sticky">
         <Toolbar>
-          <NavLink to="/" style={{ color: "white" }}>
+          <NavLink to="/" style={{ color: 'white' }}>
             <Typography>
-              <MenuBookIcon style={{color:"white"}} />
+              <MenuBookIcon style={{ color: 'white' }} />
             </Typography>
           </NavLink>
           <Tabs
-            sx={{ ml: "auto" }}
+            sx={{ ml: 'auto' }}
             textColor="inherit"
             indicatorColor="primary"
             value={value}
@@ -23,9 +23,8 @@ const Header = () => {
             <Tab LinkComponent={NavLink} to="/add" label="Add book" />
             <Tab LinkComponent={NavLink} to="/books" label="Books" />
             <Tab LinkComponent={NavLink} to="/about" label="This project" />
-            <Tab LinkComponent={NavLink} to="/login" label="Login"/>
-            <Tab LinkComponent={NavLink} to="/register" label="Register"/>
-
+            <Tab LinkComponent={NavLink} to="/login" label="Login" />
+            <Tab LinkComponent={NavLink} to="/register" label="Register" />
           </Tabs>
         </Toolbar>
       </AppBar>

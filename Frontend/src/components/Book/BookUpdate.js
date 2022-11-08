@@ -5,10 +5,10 @@ import {
   FormControlLabel,
   FormLabel,
   TextField,
-} from "@mui/material";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+} from '@mui/material';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const BookDetail = () => {
   const [inputs, setInputs] = useState();
@@ -39,7 +39,7 @@ const BookDetail = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendRequest().then(() => history("/books"));
+    sendRequest().then(() => history('/books'));
   };
   const handleChange = (e) => {
     setInputs((prevState) => ({
@@ -55,11 +55,11 @@ const BookDetail = () => {
           <Box
             display="flex"
             flexDirection="column"
-            justifyContent={"center"}
+            justifyContent={'center'}
             maxWidth={700}
-            alignContent={"center"}
+            alignContent={'center'}
             alignSelf="center"
-            marginLeft={"auto"}
+            marginLeft={'auto'}
             marginRight="auto"
             marginTop={10}
           >

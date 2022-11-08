@@ -1,6 +1,6 @@
-import { Button, Typography, Box } from "@mui/material";
-import React from "react";
-import { Link } from "react-router-dom";
+import { Button, Typography, Box } from '@mui/material';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
         <Button
           LinkComponent={Link}
           to="/books"
-          sx={{ marginTop: 15, background: "orangered" }}
+          sx={{ marginTop: 15, background: 'orangered' }}
           variant="contained"
         >
           <Typography variant="h3">View All books</Typography>
