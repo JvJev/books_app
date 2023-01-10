@@ -1,53 +1,63 @@
-ul {
+.first {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-content: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-li {
-  padding: 10px;
-  margin: 10px;
-  width: 250px;
-  max-width: 250px;
-  max-height: 400px;
-  list-style-type: none;
   justify-content: flex-start;
+  background-color: aqua;
+  border: 2px solid black;
+  padding: 10px;
+}
+.second {
+  margin: 10px;
+  height: 100px;
+  background-color: rgb(161, 231, 231);
+
+}
+.buttonDiv{
+  display: flex;
+  flex-direction: column;
+
 }
 
 .card {
   margin: auto;
-  padding: 15px;
   height: 100%;
   width: 100%;
   box-shadow: 5px 5px 10px #ccc;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   border-radius: 10px;
-  /* align-items: flex-start;
-  align-content: flex-start; */
+  justify-content: space-between;
+  
 }
-.card > img {
-  width: 100%;
-  height: 50%;
-  padding-bottom: 5px;
+img {
+  height: 100%;
   object-fit: contain;
 }
-.card article {
-  padding: 10;
-  font-style: italic;
-}
-.card h3 {
-  margin: 5px;
+.imageDiv{
+  align-items: center;  
+  width: 1vw;
+
 }
 
-.card p {
-  margin: 5px;
+
+.imageDivPreview img{
+  align-items: center;  
+  width: 1vw;
+  width: 700px;
 }
-.book-info {
-  padding-left: 5px;
-  padding-right: 5px;
-  background-color: rgb(235, 255, 241);
-  border-radius: 10px;
+
+.book-info{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+
+}
+.addButtonDiv{
+  display: flex;
+  justify-content: end;
+  padding-top: 10px;
 }

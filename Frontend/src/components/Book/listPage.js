@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import './Book.css';
 import axios from 'axios';
 import Book from './BookCard';
+import './Book.css';
+import { Button } from '@mui/material';
+import { Link, useNavigate } from 'react-router-dom';
+
+
 
 const URL = 'http://localhost:5000/books';
 const fetchHandler = async () => {
@@ -15,15 +19,20 @@ const Books = () => {
   console.log(books);
   return (
     <div>
-      <ul>
+       <div className='first'>
         {books &&
           books.map((book, i) => (
-            <li key={i}>
+            <div className='second' key={i}>
               <Book book={book} />
-            </li>
+            </div>
           ))}
-      </ul>
+      </div>
+      <div className='addButtonDiv'>
+      <Button LinkComponent={Link} to={`/add`} variant="contained" color="primary">Add new data</Button>
+
+      </div>
     </div>
+     
   );
 };
 

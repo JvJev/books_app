@@ -50,3 +50,8 @@
 .right{
   align-content: flex-start;
 }
+
+.homePageMargins{
+  padding: 1rem;
+  margin-top: 50px;
+}

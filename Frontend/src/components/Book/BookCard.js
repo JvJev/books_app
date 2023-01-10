@@ -16,20 +16,25 @@ const BookCard = (props) => {
 
   return (
     <div className="card">
+      <div className='imageDiv'>
       <img src={image} alt={name} />
-      <div className="book-info">
-        <article>By {author}</article>
-        <h3>"{name}"</h3>
-        <p>{description}</p>
-        <h3>{price} Eur</h3>
       </div>
-
-      <Button LinkComponent={Link} to={`/books/${_id}`} sx={{ mt: 'auto' }}>
-        Update
-      </Button>
-      <Button color="error" onClick={deleteHandler} sx={{ mt: 'auto' }}>
-        Delete
-      </Button>
+      
+      <div className="book-info">
+        <p>By {author}</p>
+        <p>"{name}"</p>
+        <p>{description}</p>
+        <p>{price} Eur</p>
+      </div>
+      <div className='buttonDiv'>
+        <Button LinkComponent={Link} to={`/books/${_id}`} sx={{ mt: 'auto' }}>
+          Update
+        </Button>
+        <Button color="error" onClick={deleteHandler} sx={{ mt: 'auto' }}>
+          Delete
+        </Button>
+      </div>
+      
     </div>
   );
 };

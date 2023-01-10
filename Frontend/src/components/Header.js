@@ -6,7 +6,7 @@ const Header = () => {
   const [value, setValue] = useState();
   return (
     <div>
-      <AppBar sx={{ backgroundColor: '#425e45' }} position="sticky">
+      <AppBar sx={{ backgroundColor: '#425e45' }} position="fixed">
         <Toolbar>
           <NavLink to="/" style={{ color: 'white' }}>
             <Typography>
@@ -23,8 +23,6 @@ const Header = () => {
             <Tab LinkComponent={NavLink} to="/add" label="Add book" />
             <Tab LinkComponent={NavLink} to="/books" label="Books" />
             <Tab LinkComponent={NavLink} to="/about" label="This project" />
-            <Tab LinkComponent={NavLink} to="/login" label="Login" />
-            <Tab LinkComponent={NavLink} to="/register" label="Register" />
           </Tabs>
         </Toolbar>
       </AppBar>
